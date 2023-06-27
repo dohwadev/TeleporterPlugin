@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+ <PropertyGroup>
+  <TargetFramework>net6-windows</TargetFramework>
+  <PlatformTarget>x64</PlatformTarget>
+  <Nullable>enable</Nullable>
+  <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  <DebugType>Full</DebugType>
+  <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
+  <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+  <AssemblyVersion>2.0.2.0</AssemblyVersion>
+ </PropertyGroup>
+
+ <PropertyGroup>
+  <DalamudLibPath>E:\GitHubDesktop\Dalamud 7.3.5.0\bin\Release\</DalamudLibPath>
+ </PropertyGroup>
+
+ <ItemGroup>
+  <PackageReference Include="DalamudPackager" Version="2.1.10" />
+
+  <Content Include="images\icon.png" CopyToOutputDirectory="Always" />
+  <Content Include="TeleporterPlugin.json" CopyToOutputDirectory="Always" />
+
+  <Reference Include="Dalamud" HintPath="$(DalamudLibPath)Dalamud.dll" Private="False" />
+  <Reference Include="ImGui.NET" HintPath="$(DalamudLibPath)ImGui.NET.dll" Private="False" />
+  <Reference Include="Lumina" HintPath="$(DalamudLibPath)Lumina.dll" Private="False" />
+  <Reference Include="Lumina.Excel" HintPath="$(DalamudLibPath)Lumina.Excel.dll" Private="False" />
+  <Reference Include="FFXIVClientStructs" HintPath="$(DalamudLibPath)FFXIVClientStructs.dll" Private="False" />
+ </ItemGroup>
+</Project>
